@@ -1,0 +1,8 @@
+{
+  "name": "Luisa Spagnoli | Sell-Out & Order Analytics",
+  "description": "Interactive merchandising and sell-out performance dashboard for Luisa Spagnoli Boutique Nevskiy, integrating multi-PO orders, Joor catalog photos, and retail sell-out tracking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
