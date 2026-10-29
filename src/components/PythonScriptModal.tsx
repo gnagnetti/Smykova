@@ -8,9 +8,73 @@ interface PythonScriptModalProps {
 
 export const PythonScriptModal: React.FC<PythonScriptModalProps> = ({ isOpen, onClose }) => {
   const [copied, setCopied] = useState(false);
-  const [tab, setTab] = useState<'cli' | 'streamlit'>('streamlit');
+  const [tab, setTab] = useState<'colab' | 'cli' | 'streamlit'>('colab');
 
   if (!isOpen) return null;
+
+  const colabScript = `import pandas as pd
+from google.colab import files
+
+print("1. Carica il file Excel:")
+uploaded = files.upload()
+
+file_name = list(uploaded.keys())[0]
+
+# 2. Lettura del file Excel senza intestazione predefinita
+df = pd.read_excel(file_name, header=None)
+
+# 3. Estrazione e parsing dei dati reali (partendo dalla riga 10 in poi)
+parsed_rows = []
+for idx in range(10, len(df)):
+    row = df.iloc[idx]
+    style = str(row[0]).strip()
+    
+    # Interrompe o salta se incontra righe vuote o la riga finale di totale ("Итого")
+    if style == 'Итого' or style == 'nan' or not style:
+        continue
+        
+    desc = str(row[1]).strip()
+    units = row[3]
+    
+    # Salta le intestazioni di categoria
+    if desc == 'nan' or ',' not in desc:
+        continue
+        
+    # Scompone la stringa in colonna 1 (es. "Жакет LS, L, 4606 0943")
+    parts = [p.strip() for p in desc.split(',')]
+    
+    name = parts[0] if len(parts) > 0 else ""
+    size = parts[1] if len(parts) > 1 else ""
+    
+    # Mantiene l'intera stringa del colore senza troncarla al primo spazio
+    color = parts[2] if len(parts) > 2 else ""
+    
+    parsed_rows.append({
+        'Style': style,
+        'Name': name,
+        'Color': color,
+        'Size': size,
+        'Units': units
+    })
+
+# Creazione del DataFrame finale con le colonne ordinate esattamente come richiesto
+df_final = pd.DataFrame(parsed_rows)
+required_columns = ['Style', 'Name', 'Color', 'Size', 'Units']
+df_final = df_final[required_columns]
+
+# 4. Salvataggio in formato CSV con codifica utf-8-sig
+output_filename = 'export_ordinato.csv'
+df_final.to_csv(output_filename, index=False, encoding='utf-8-sig')
+
+print(f"\\nFile CSV generato correttamente con {len(df_final)} righe!")
+print("\\nAnteprima delle prime righe:")
+print(df_final.head(10))
+
+# 5. Forzatura del download del file da Colab
+print("\\nAvvio del download...")
+files.download(output_filename)
+`;
+
 
   const pythonCliScript = `#!/usr/bin/env python3
 """
@@ -269,7 +333,8 @@ if f_orders and f_foto and f_sellout:
     )
 `;
 
-  const activeCode = tab === 'cli' ? pythonCliScript : streamlitScript;
+  const activeCode =
+    tab === 'colab' ? colabScript : tab === 'cli' ? pythonCliScript : streamlitScript;
 
   const handleCopy = () => {
     navigator.clipboard.writeText(activeCode);
@@ -278,7 +343,12 @@ if f_orders and f_foto and f_sellout:
   };
 
   const handleDownload = () => {
-    const filename = tab === 'cli' ? 'luisa_spagnoli_sellout.py' : 'app_streamlit_sellout.py';
+    const filename =
+      tab === 'colab'
+        ? 'convert_sellout_colab.py'
+        : tab === 'cli'
+        ? 'luisa_spagnoli_sellout.py'
+        : 'app_streamlit_sellout.py';
     const blob = new Blob([activeCode], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
@@ -310,18 +380,24 @@ if f_orders and f_foto and f_sellout:
           </h2>
         </div>
         <p className="mt-1 text-xs text-stone-500">
-          Codice sorgente pronto all'uso con correzione per l'errore{' '}
-          <code className="font-mono bg-stone-100 text-rose-800 px-1 py-0.5 rounded">
-            header=[17] IndexError
-          </code>{' '}
-          riscontrato sui fogli <em>Cancelled Styles</em>.
+          Codice sorgente pronto all'uso: script Colab per conversione 1C in export_ordinato.csv e pipeline ordini JOOR.
         </p>
 
         {/* Tab switch */}
-        <div className="mt-4 flex items-center gap-2 border-b border-stone-200 pb-2">
+        <div className="mt-4 flex flex-wrap items-center gap-2 border-b border-stone-200 pb-2">
+          <button
+            onClick={() => setTab('colab')}
+            className={`px-3 py-1.5 rounded text-xs font-medium transition cursor-pointer ${
+              tab === 'colab'
+                ? 'bg-amber-900 text-white'
+                : 'text-stone-600 hover:text-stone-900 bg-stone-100'
+            }`}
+          >
+            Google Colab (export_ordinato.csv)
+          </button>
           <button
             onClick={() => setTab('streamlit')}
-            className={`px-3 py-1.5 rounded text-xs font-medium transition ${
+            className={`px-3 py-1.5 rounded text-xs font-medium transition cursor-pointer ${
               tab === 'streamlit'
                 ? 'bg-stone-900 text-white'
                 : 'text-stone-600 hover:text-stone-900 bg-stone-100'
@@ -331,7 +407,7 @@ if f_orders and f_foto and f_sellout:
           </button>
           <button
             onClick={() => setTab('cli')}
-            className={`px-3 py-1.5 rounded text-xs font-medium transition ${
+            className={`px-3 py-1.5 rounded text-xs font-medium transition cursor-pointer ${
               tab === 'cli'
                 ? 'bg-stone-900 text-white'
                 : 'text-stone-600 hover:text-stone-900 bg-stone-100'
@@ -344,7 +420,13 @@ if f_orders and f_foto and f_sellout:
         {/* Code box */}
         <div className="relative mt-4">
           <div className="flex items-center justify-between rounded-t-lg bg-stone-900 px-4 py-2 text-xs text-stone-300">
-            <span className="font-mono">{tab === 'cli' ? 'luisa_spagnoli_sellout.py' : 'app_streamlit.py'}</span>
+            <span className="font-mono">
+              {tab === 'colab'
+                ? 'convert_sellout_colab.py'
+                : tab === 'cli'
+                ? 'luisa_spagnoli_sellout.py'
+                : 'app_streamlit.py'}
+            </span>
             <div className="flex items-center gap-2">
               <button
                 onClick={handleCopy}

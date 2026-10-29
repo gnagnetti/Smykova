@@ -75,6 +75,7 @@ export interface BoutiqueInfo {
   customerId: string;
   reportDate: string;
   orderSeason: string;
+  clientLines?: string[];
 }
 
 export type ViewMode = 'lookbook' | 'table' | 'categories' | 'sizes' | 'linesheets';

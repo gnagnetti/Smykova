@@ -1,14 +1,20 @@
 import { BoutiqueInfo, MergedProduct, OrderItem } from '../types';
 
 export const INITIAL_BOUTIQUE_INFO: BoutiqueInfo = {
-  name: 'Luisa Spagnoli',
-  location: 'Boutique Spb Nevskiy',
-  address: 'Nevskiy Pr. 137, Saint Petersburg 194044 - Russian Federation',
-  representative: 'Juliana Lellis Lobo',
-  email: 'juliana.lellislobo@luisaspagnoli.it',
-  customerId: '74338',
-  reportDate: '15.10.2026',
-  orderSeason: 'FW 2026 - Main Collection & Pre-Fall',
+  name: 'Ip Smykov Igor Viktorovich',
+  location: 'Ip Smykov Igor Viktorovich',
+  address: '2 Krasnodarskaya Str. 149-5 Apt.36, 344091 Rostov On Don, Russia',
+  representative: 'LUCA GNAGNETTI',
+  email: 'igor.smykov@luisaspagnoli.it',
+  customerId: '39646',
+  reportDate: '03/10/2026',
+  orderSeason: 'FW 2026',
+  clientLines: [
+    'Ip Smykov Igor Viktorovich',
+    '2 Krasnodarskaya Str. 149-5 Apt.36',
+    '344091 * Rostov On Don * Russian Federation, -',
+    'Russia',
+  ],
 };
 
 export const INITIAL_ORDERS: OrderItem[] = [

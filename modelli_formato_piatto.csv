@@ -1,225 +1,359 @@
-Modello,Colore,Taglia,Quantità
-MEDORO.A,0823,U,1
-LADULAS,0813,S,1
-LATTERIA.A,2417,M,1
-LATTERIA.A,0218,XL,1
-LEGALE.B,0202,L,1
-LINDAS,0202/0202,M,1
-LINOSA,3352,L,1
-LINOSA,3352,M,1
-LIQUOROSA,0101,S,1
-LISELLA,4614,L,2
-LISELLA,4614,S,1
-LOTTY,4625,M,1
-LOTTY,4625,S,1
-LUMINARIA,0216/0216,M,1
-LUSIA,3402/0101,M,1
-NAVIGERO,0002,U,2
-NECESSARIO,0986/0002,U,1
-NECESSARIO,2211/0002,U,1
-NIASSESI,0101/0002,U,1
-NIASSESI,0547/0002,U,1
-NIASSESI,1116/0002,U,1
-NIASSESI,2449/0002,U,1
-NANNACARA,0002,U,1
-NANTERRE,0002/0001,U,2
-NERITA.C,0002,U,1
-NIPPLO,0383/0001/0002,U,1
-NIPPLO,0907/0001/0002,U,1
-NOLANITE.A,0002,U,3
-MINUCCIO.A,0846,42,1
-MODINE.B,0101,M,1
-OCCULTO.C,0101,46,1
-OLLA,1073,48,1
-OPTARE,3326,40,1
-OPTARE,3326,48,1
-ORNAGO,1759,46,2
-ORNAGO,1759,48,1
-ORTIGA,3261,44,1
-ORTIGA,3261,48,1
-OSIGLIA,0813,40,1
-OSTIOLO,2046,46,1
-OSTIOLO,2046,48,1
-NOGAROLE,1709/0002,U,1
-OLAP,1296,40,1
-OLAP,1296,44,1
-OLAP,1119,48,1
-OLIBIS,1088,44,1
-OLIBIS,1088,50,1
-ONEGA,1204,44,1
-OPAGLIO,0927,40,1
-OPAGLIO,0927,46,2
-OPAGLIO,0927,48,1
-ORLATO.A,0929,40,1
-ORLATO.A,0929,42,1
-ORLATO.A,0929,44,1
-ORLATO.A,0929,46,1
-CUORICINO,2203/0372,L,1
-CUORICINO,0838/0202,M,1
-CUORICINO,2203/0372,S,1
-CUORICINO,2203/0372,XL,1
-MADIRA,0101,L,1
-MADIRA,0319,L,1
-MADIRA,2435,M,1
-MADIRA,0101,S,1
-MADIRA,0319,S,1
-MADIRA,2435,S,1
-MAMAS,0101,L,1
-MAMAS,0101,M,1
-MAMAS,0101,XL,1
-MEISSA,0101,L,1
-MEISSA,2435,L,1
-MEISSA,0101,M,1
-MEISSA,2435,M,1
-MEISSA,0101,XL,2
-MERENDE,1736,S,1
-MERENDE,1736,XL,1
-MICOLOGIA,1117/1118,L,1
-MICOLOGIA,1117/1118,XL,1
-MITY,3374,L,2
-SAGARI,3372,40,1
-SAGARI,3372,42,1
-SCALARE,0817,M,1
-SCALARE,0817,S,2
-SCIANTAL,3285,40,1
-SCIANTAL,3285,42,1
-SCIANTAL,3285,46,1
-SCIANTAL,3285,48,1
-SERAFICA,2046,46,1
-SERAFICA,2046,48,1
-STAFILO,3261,44,1
-STAFILO,3261,48,1
-STATUARIA,1227/1227,44,1
-SVOLTA,3404,44,1
-SVOLTA,3404,48,1
-MAICA,2050,S,1
-NANTILDE,0002,U,1
-NATALIDI,0002,U,1
-NICCIOLETA,1120/0002,U,1
-SOMMARIA,4606/0943,L,1
-SOMMARIA,4606/0943,M,2
-SOMMARIA,4606/0943,S,1
-SQUADRATURA,0101/0988,L,1
-STATUETTA,2418/0931,M,1
-STATUETTA,2418/0931,S,1
-UMBERINO,0950,38,1
-UMBERTINO,0986,40,1
-SAURIS,0985,L,1
-SAURIS,0985,M,1
-SEGNALIBRO,3335,S,1
-STENIA,3312,M,1
-STENOGRAFO,0101,M,1
-STENOGRAFO,2716,S,1
-STRUMENTO,0817/1022,M,1
-STRUMENTO,1206/1206,S,1
-MARCATORE,2250,U,1
-REMIGE,4647,U,1
-ROBOAMO,3465,U,1
-GENEROSITA,4625,44,1
-GENIALITA,3350,L,1
-GENIALITA,3350,M,1
-GESSICA,2015,M,1
-GHISALBA,0202/0101,46,1
-GRADUALITA,1037,M,1
-GRAZIOSA,1219/1136,L,2
-GUANINA,3312,46,1
-MADELIN,0101/0101,L,1
-MASCAL,0846,L,1
-MASURIA,0101,L,1
-MASURIA,2435,L,1
-MIRZIANA,0759,M,1
-MIRZIANA,1736,S,1
-MACARIA,0202,L,1
-MACARIA,0202,S,1
-MORENITA,1736,L,1
-CAPIRE,0829,M,1
-CASILDA,2203/0372,L,1
-CASILDA,0838/0202,M,1
-CASILDA,2203/0372,S,1
-CASILDA,2203/0372,XL,1
-CASISTICA,1151/1181,L,1
-CASISTICA,1151/1181,S,1
-CASISTICA,1151/1181,XL,1
-CIPS,0838,U,1
-CIPS,1161,U,1
-CREMONA,3421,S,1
-MABELS,2435,L,1
-MABELS,2435,S,1
-MAGGIOLONE,0202/0101,M,1
-MAGGIOLONE,0202/0101,S,1
-MAGGIOLONE,0202/0101,XL,1
-MANATTAN,0802,L,1
-MANATTAN,2435,M,1
-MANATTAN,2435,S,1
-MANO.H,0202,L,1
-MANO.H,0202,S,1
-MANOS.F,0204,M,1
-MANOS.F,0970,M,1
-MANOS.F,2435,S,1
-MANOS.F,2435,XL,1
-MARATEA,0101,L,1
-MARIUS,3358,L,1
-MARIUS,3426,L,1
-MENELAO,0101/0202,L,1
-MENELAO,0319,L,1
-MENELAO,0101/0202,M,2
-MENELAO,0319,S,1
-MERITARE,0319,L,1
-MERITARE,0319,S,1
-MERITARE,0823,XL,1
-MESSIER,1736,M,1
-MORALITA,2050,L,1
-MORALITA,2234,M,1
-MORALITA,2234,S,1
-MOSSA.G,0319,L,1
-MOSSA.G,1117,L,1
-MOSSA.G,1196,L,1
-MOSSA.G,0319,M,1
-MOSSA.G,0319,XL,1
-MOSSA.G,1117,XL,1
-MOSSA.G,1196,XL,1
-MURCIA,0802,M,1
-MURCIA,0802,S,1
-ZAGRA,3192,S,1
-ZAMBRONE,0470,L,1
-ZAMBRONE,0470,M,1
-ZANO,0428,L,1
-DAMIERA,0101/0002,M,1
-DANCING,0101/0002,S,1
-DINTORNI.A,2427/0002,U,1
-DOGALE.A,0986/0002,U,1
-NASSO,0002,U,1
-LUSINGA,0101,M,1
-LUSINGA,0101,S,1
-MUNI.A,0802,U,1
-MUNI.A,2435,U,1
-FABULA,0101,L,1
-FABULA,0101,M,1
-FANNY,3372,M,2
-FAUSTIN,0101,42,1
-FAUSTIN,0101,46,1
-FENICE.B,2226,40,1
-FENICE.B,2226,46,1
-FERRIERA,0813,S,1
-FESTONE,2046,L,1
-FESTONE,0101,M,1
-FESTONE,2046,M,1
-FESTONE,0101,S,1
-FESTONE,2046,XL,1
-FIORINI,3285,46,1
-FOLIGNO,3402,L,1
-FONDAZIONE,0101/0101/0101,40,1
-FONDAZIONE,0101/0101/0101,44,1
-FRANCHEZZA,0863,44,1
-FRANCHEZZA,0863,46,1
-FRANCOBOLLO,3372,S,1
-FRANCOBOLLO,3372,XL,1
-FRANCOBOLLO,3372,XS,1
-FRASCATI,1227,44,1
-FRAZIONE,3404,XL,1
-MINIA,1117/1118,L,1
-MINIA,1117/1118,XL,1
-MOROLO,0101,L,1
-MOROLO,2435,L,1
-MOROLO,0101,S,1
-MOROLO,2435,S,1
+﻿Style,Name,Color,Size,Units
+"LADULAS,""Camicia LS"",""0813"",""M"",1"
+"LADULAS,""Camicia LS"",""0813"",""S"",1"
+"LAMA,""Blusa LS"",""0101"",""42"",1"
+"LAMA,""Blusa LS"",""0101"",""46"",1"
+"LAMA,""Blusa LS"",""0101"",""48"",1"
+"LATTERIA A,""Blusa LS"",""0994"",""L"",1"
+"LATTERIA A,""Blusa LS"",""0994"",""M"",1"
+"LATTERIA A,""Blusa LS"",""0994"",""S"",1"
+"LAVIANO,""Blusa LS"",""4626"",""M"",1"
+"LAVIANO,""Blusa LS"",""4626"",""S"",1"
+"LAVIANO,""Blusa LS"",""4626"",""XL"",1"
+"LEZIONI,""Blusa LS"",""0101"",""L"",2"
+"LEZIONI,""Blusa LS"",""0993"",""M"",1"
+"LEZIONI,""Blusa LS"",""0993"",""S"",1"
+"LICEALI,""Blusa LS"",""3324"",""L"",1"
+"LINDAS,""Blusa LS"",""0202"",""L"",1"
+"LINDAS,""Blusa LS"",""0202"",""S"",1"
+"LINOSA,""Blusa LS"",""3286"",""L"",2"
+"LINOSA,""Blusa LS"",""3286"",""M"",2"
+"LINOSA,""Blusa LS"",""3286"",""S"",2"
+"LIQUOROSA,""Blusa LS"",""0101"",""L"",1"
+"LIQUOROSA,""Blusa LS"",""0101"",""M"",1"
+"LIQUOROSA,""Blusa LS"",""0101"",""S"",2"
+"LISELLA,""Blusa LS"",""4618"",""L"",1"
+"LISELLA,""Blusa LS"",""4618"",""M"",2"
+"LISELLA,""Blusa LS"",""4614"",""S"",1"
+"LISELLA,""Blusa LS"",""4618"",""S"",2"
+"LISIANA,""Blusa LS"",""0202"",""L"",2"
+"LISIANA,""Blusa LS"",""0202"",""S"",1"
+"LISIO,""Blusa LS"",""3413"",""L"",1"
+"LISIO,""Blusa LS"",""3413"",""M"",1"
+"LOGGIATE,""Blusa LS"",""4575"",""L"",1"
+"LOGGIATE,""Blusa LS"",""4575"",""M"",1"
+"LOGGIATE,""Blusa LS"",""4575"",""S"",1"
+"LUMINARIA,""Blusa LS"",""0216"",""L"",1"
+"LUMINARIA,""Blusa LS"",""0216"",""M"",1"
+"LUMINARIA,""Blusa LS"",""0216"",""S"",1"
+"LUMINARIA,""Blusa LS"",""0216"",""XL"",1"
+"LUSIA,""Blusa LS"",""3402"",""S"",1"
+"MINUCCIO A,""Pantaloni LS"",""0101"",""44"",1"
+"MINUCCIO A,""Pantaloni LS"",""0101"",""46"",2"
+"MINUCCIO A,""Pantaloni LS"",""0101"",""50"",1"
+"MODINE B,""Pantaloni LS"",""0101"",""M"",1"
+"MODINE B,""Pantaloni LS"",""0101"",""S"",1"
+"OCCULTO C,""Pantaloni LS"",""0101"",""42"",1"
+"OCCULTO C,""Pantaloni LS"",""2202"",""42"",1"
+"OCCULTO C,""Pantaloni LS"",""0101"",""44"",1"
+"OCCULTO C,""Pantaloni LS"",""2202"",""44"",1"
+"OCCULTO C,""Pantaloni LS"",""2202"",""46"",1"
+"OCCULTO C,""Pantaloni LS"",""0101"",""48"",1"
+"OCCULTO C,""Pantaloni LS"",""2202"",""48"",1"
+"OCTAVIA,""Pantaloni LS"",""0101"",""40"",1"
+"OCTAVIA,""Pantaloni LS"",""0101"",""42"",1"
+"OCTAVIA,""Pantaloni LS"",""0970"",""42"",1"
+"OCTAVIA,""Pantaloni LS"",""0101"",""44"",1"
+"OCTAVIA,""Pantaloni LS"",""0970"",""44"",1"
+"OCTAVIA,""Pantaloni LS"",""0970"",""48"",1"
+"OLAP,""Pantaloni LS"",""1119"",""40"",1"
+"OLAP,""Pantaloni LS"",""1119"",""42"",1"
+"OLAP,""Pantaloni LS"",""1119"",""44"",1"
+"OLAP,""Pantaloni LS"",""1031"",""46"",1"
+"OLAP,""Pantaloni LS"",""1119"",""46"",1"
+"OLAP,""Pantaloni LS"",""1031"",""48"",1"
+"OLAP,""Pantaloni LS"",""1119"",""48"",1"
+"OLIBIS,""Pantaloni LS"",""1088"",""46"",1"
+"OLIBIS,""Pantaloni LS"",""1088"",""48"",1"
+"OLIBIS,""Pantaloni LS"",""1088"",""50"",1"
+"OPAGLIO,""Pantaloni LS"",""0927"",""40"",1"
+"OPAGLIO,""Pantaloni LS"",""0927"",""42"",2"
+"OPAGLIO,""Pantaloni LS"",""0927"",""44"",2"
+"OPAGLIO,""Pantaloni LS"",""0927"",""46"",2"
+"OPAGLIO,""Pantaloni LS"",""0927"",""48"",2"
+"OPTARE,""Pantaloni LS"",""3326"",""42"",1"
+"OPTARE,""Pantaloni LS"",""3326"",""44"",1"
+"OPTARE,""Pantaloni LS"",""3326"",""46"",1"
+"ORIOLA,""Pantaloni LS"",""0921"",""L"",2"
+"ORIOLA,""Pantaloni LS"",""0921"",""M"",2"
+"ORLATO A,""Pantaloni LS"",""0929"",""40"",1"
+"ORLATO A,""Pantaloni LS"",""0929"",""42"",1"
+"ORLATO A,""Pantaloni LS"",""0929"",""44"",1"
+"ORLATO A,""Pantaloni LS"",""0929"",""46"",1"
+"ORPELLI,""Pantaloni LS"",""0813"",""M"",1"
+"ORPELLI,""Pantaloni LS"",""0813"",""S"",1"
+"OSTEN E,""Pantaloni LS"",""0101"",""40"",1"
+"OSTEN E,""Pantaloni LS"",""0101"",""42"",1"
+"OSTEN E,""Pantaloni LS"",""0101"",""44"",1"
+"OSTEN E,""Pantaloni LS"",""0209"",""44"",1"
+"OSTEN E,""Pantaloni LS"",""0101"",""46"",2"
+"OSTEN E,""Pantaloni LS"",""0101"",""48"",1"
+"OSTIOLO,""Pantaloni LS"",""0733"",""40"",1"
+"OSTIOLO,""Pantaloni LS"",""0101"",""42"",1"
+"OSTIOLO,""Pantaloni LS"",""0733"",""42"",1"
+"OSTIOLO,""Pantaloni LS"",""0101"",""44"",2"
+"OSTIOLO,""Pantaloni LS"",""0733"",""44"",1"
+"OSTIOLO,""Pantaloni LS"",""0101"",""46"",1"
+"OSTIOLO,""Pantaloni LS"",""0101"",""48"",1"
+"OTTILE,""Pantaloni LS"",""3360"",""40"",1"
+"OTTILE,""Pantaloni LS"",""3360"",""42"",1"
+"OTTILE,""Pantaloni LS"",""3360"",""44"",1"
+"ZAVORRA C,""Pantaloni LS"",""0101"",""L"",1"
+"ZAVORRA C,""Pantaloni LS"",""0101"",""M"",1"
+"CREMINA,""Giacca LS"",""2331"",""S"",1"
+"MANTES,""Giacca LS"",""3390"",""L"",1"
+"MANTES,""Giacca LS"",""3390"",""XL"",1"
+"MARSELA,""Giacca LS"",""0101"",""L"",1"
+"MARSELA,""Giacca LS"",""0802"",""L"",1"
+"MARSELA,""Giacca LS"",""0101"",""M"",1"
+"MARSELA,""Giacca LS"",""0802"",""M"",1"
+"MARSELA,""Giacca LS"",""0101"",""S"",1"
+"MARSELA,""Giacca LS"",""0802"",""S"",2"
+"MEISSA,""Giacca LS"",""0101"",""L"",1"
+"MEISSA,""Giacca LS"",""0101"",""M"",1"
+"MEISSA,""Giacca LS"",""0101"",""XL"",1"
+"MELTINA,""Giacca LS"",""0101"",""L"",2"
+"MELTINA,""Giacca LS"",""0101"",""M"",2"
+"MELTINA,""Giacca LS"",""0101"",""S"",2"
+"MERENDE,""Giacca LS"",""2234"",""L"",1"
+"MERENDE,""Giacca LS"",""2234"",""S"",1"
+"MERENDE,""Giacca LS"",""2234"",""XL"",1"
+"MODICI,""Giacca LS"",""0101"",""L"",1"
+"MODICI,""Giacca LS"",""0202"",""S"",1"
+"MOLES,""Giacca LS"",""0202"",""L"",1"
+"MOLES,""Giacca LS"",""0202"",""M"",1"
+"MOLES,""Giacca LS"",""0759"",""M"",1"
+"MOLES,""Giacca LS"",""0202"",""S"",1"
+"MOLES,""Giacca LS"",""0202"",""XL"",1"
+"SAGARI,""Giacca LS"",""3372"",""42"",1"
+"SAGARI,""Giacca LS"",""3372"",""44"",1"
+"SERAFICA,""Giacca LS"",""0733"",""40"",1"
+"SERAFICA,""Giacca LS"",""0733"",""42"",1"
+"SERAFICA,""Giacca LS"",""0101"",""44"",2"
+"SERAFICA,""Giacca LS"",""0733"",""44"",1"
+"SERAFICA,""Giacca LS"",""0101"",""46"",1"
+"SERAFICA,""Giacca LS"",""0101"",""48"",1"
+"SERAFICA,""Giacca LS"",""0733"",""48"",1"
+"SOGNATRICE,""Giacca LS"",""3360"",""40"",1"
+"SOGNATRICE,""Giacca LS"",""3360"",""42"",1"
+"SOGNATRICE,""Giacca LS"",""3360"",""44"",1"
+"SOMMARIA,""Giacca LS"",""4606"",""L"",1"
+"SVOLTA,""Giacca LS"",""3331"",""40"",1"
+"SVOLTA,""Giacca LS"",""3331"",""42"",1"
+"SVOLTA,""Giacca LS"",""3331"",""44"",1"
+"SVOLTA,""Giacca LS"",""3331"",""46"",1"
+"SVOLTA,""Giacca LS"",""3331"",""48"",1"
+"ZAGAROLO,""Giacca LS"",""0101"",""L"",1"
+"ZAGAROLO,""Giacca LS"",""0101"",""M"",1"
+"ZAGAROLO,""Giacca LS"",""0101"",""S"",1"
+"ZAGAROLO,""Giacca LS"",""0101"",""XL"",1"
+"MENELAO,""Gilet LS"",""0101"",""M"",2"
+"MENELAO,""Gilet LS"",""0204"",""M"",1"
+"MENELAO,""Gilet LS"",""0319"",""M"",1"
+"MENELAO,""Gilet LS"",""0101"",""S"",2"
+"MENELAO,""Gilet LS"",""0204"",""S"",2"
+"MENELAO,""Gilet LS"",""0319"",""S"",1"
+"MADIRA,""Giacca-Cardigan LS"",""0101"",""M"",1"
+"MADIRA,""Giacca-Cardigan LS"",""0319"",""M"",1"
+"MADIRA,""Giacca-Cardigan LS"",""0101"",""S"",1"
+"MADIRA,""Giacca-Cardigan LS"",""0319"",""S"",1"
+"SCALARE,""Kyptka LS"",""0101"",""L"",1"
+"SCALARE,""Kyptka LS"",""0101"",""M"",1"
+"SCALARE,""Kyptka LS"",""0101"",""S"",1"
+"SOLARITA,""Kyptka LS"",""0101"",""42"",1"
+"SOLARITA,""Kyptka LS"",""0101"",""44"",1"
+"SOLARITA,""Kyptka LS"",""2226"",""44"",1"
+"SOLARITA,""Kyptka LS"",""0101"",""48"",1"
+"SOLARITA,""Kyptka LS"",""2226"",""48"",1"
+"SPORTIVO,""Kyptka LS"",""2226"",""L"",1"
+"SPORTIVO,""Kyptka LS"",""2226"",""M"",1"
+"SPORTIVO,""Kyptka LS"",""2226"",""S"",1"
+"STATUETTA,""Kyptka LS"",""0931"",""L"",1"
+"STATUETTA,""Kyptka LS"",""0931"",""M"",1"
+"STATUETTA,""Kyptka LS"",""0931"",""XL"",1"
+"STELLE,""Kyptka LS"",""0919"",""L"",1"
+"STELLE,""Kyptka LS"",""0919"",""S"",1"
+"STRUMENTO,""apka LS"",""1206"",""L"",1"
+"STRUMENTO,""apka LS"",""1206"",""M"",1"
+"STRUMENTO,""apka LS"",""1206"",""S"",1"
+"STRUMENTO,""apka LS"",""1206"",""XL"",1"
+"RIVOLO,""Hakka LS"",""3278"",""U"",2"
+"XARIEL A,""Ok LS"",""0347"",""U"",1"
+"XARIEL A,""Ok LS"",""3307"",""U"",1"
+"SALICORNIA,""Cappotto LS"",""2262"",""S"",1"
+"SALOTTINO,""Cappotto LS"",""0202"",""S"",1"
+"SEGNALIBRO,""Cappotto LS"",""3335"",""S"",1"
+"SITUAZIONE,""oyCappotto LS"",""0809"",""M"",1"
+"SITUAZIONE,""oyCappotto LS"",""0809"",""S"",1"
+"SOPPALCO,""oyCappotto LS"",""1153"",""L"",1"
+"SOPPALCO,""oyCappotto LS"",""1153"",""M"",1"
+"SOPPALCO,""oyCappotto LS"",""1153"",""S"",1"
+"SPILLATRICE,""oyCappotto LS"",""3470"",""L"",2"
+"SPILLATRICE,""oyCappotto LS"",""3470"",""S"",1"
+"STENOGRAFO,""Cappotto LS"",""0101"",""S"",1"
+"MISS A,""epatk LS"",""0101"",""U"",1"
+"MISS A,""epatk LS"",""0970"",""U"",1"
+"UBOLDO,""epatk LS"",""2218"",""U"",1"
+"GAEL,""Abito LS"",""4626"",""40"",2"
+"GAEL,""Abito LS"",""4626"",""42"",2"
+"GAEL,""Abito LS"",""4626"",""46"",1"
+"GAEL,""Abito LS"",""4626"",""48"",2"
+"GALALITE,""Abito LS"",""0002"",""46"",1"
+"GENIALITA,""Abito LS"",""3350"",""L"",1"
+"GENIALITA,""Abito LS"",""3350"",""M"",1"
+"GENIALITA,""Abito LS"",""3350"",""S"",1"
+"GERVASO,""Abito LS"",""4622"",""44"",1"
+"GERVASO,""Abito LS"",""4622"",""46"",1"
+"GESSICA,""Abito LS"",""0101"",""L"",1"
+"GESSICA,""Abito LS"",""2417"",""L"",1"
+"GESSICA,""Abito LS"",""2417"",""M"",1"
+"GIREVOLE,""Abito LS"",""3402"",""L"",1"
+"GIREVOLE,""Abito LS"",""3402"",""M"",1"
+"GOTICA,""Abito LS"",""1034"",""40"",2"
+"GOTICA,""Abito LS"",""1034"",""44"",1"
+"GRADUALITA,""Abito LS"",""1037"",""L"",1"
+"MADELIN,""Abito LS"",""0101"",""M"",1"
+"MASCAL,""Abito LS"",""2246"",""L"",1"
+"MASCAL,""Abito LS"",""0846"",""M"",1"
+"MASCAL,""Abito LS"",""2246"",""M"",1"
+"MASCAL,""Abito LS"",""0846"",""S"",1"
+"MASCAL,""Abito LS"",""2246"",""S"",1"
+"MIRZIANA,""Abito LS"",""0759"",""S"",1"
+"MIRZIANA,""Abito LS"",""0759"",""XL"",1"
+"CAPIRE,""yobep LS"",""0101"",""L"",1"
+"CAPRESE B,""yobep LS"",""2331"",""L"",1"
+"CAPRESE B,""yobep LS"",""2331"",""S"",1"
+"CASISTICA,""yobep LS"",""1151"",""L"",1"
+"CASISTICA,""yobep LS"",""1151"",""M"",1"
+"CASISTICA,""yobep LS"",""1151"",""S"",1"
+"CASISTICA,""yobep LS"",""1151"",""XL"",1"
+"CUFRA,""yobep LS"",""0101"",""L"",1"
+"MABELS,""yobep LS"",""2435"",""L"",1"
+"MAGGIOLONE,""yobep LS"",""0202"",""L"",1"
+"MAGGIOLONE,""yobep LS"",""0759"",""L"",1"
+"MAGGIOLONE,""yobep LS"",""0202"",""M"",1"
+"MAGGIOLONE,""yobep LS"",""0202"",""S"",1"
+"MAGGIOLONE,""yobep LS"",""0202"",""XL"",1"
+"MANOS F,""yobep LS"",""0970"",""L"",2"
+"MANOS F,""yobep LS"",""0970"",""M"",1"
+"MANOS F,""yobep LS"",""0970"",""S"",2"
+"MANOS F,""yobep LS"",""0970"",""XL"",1"
+"MANOS F,""yobep LS"",""2246"",""XL"",1"
+"MARIUS,""yobep LS"",""3358"",""L"",1"
+"MARIUS,""yobep LS"",""3426"",""L"",2"
+"MARIUS,""yobep LS"",""3358"",""M"",1"
+"MARIUS,""yobep LS"",""3361"",""M"",2"
+"MARIUS,""yobep LS"",""3426"",""M"",2"
+"MARIUS,""yobep LS"",""3358"",""S"",1"
+"MARIUS,""yobep LS"",""3361"",""S"",2"
+"MARIUS,""yobep LS"",""3426"",""S"",2"
+"MASCATE,""yobep LS"",""0204"",""L"",1"
+"MASCATE,""yobep LS"",""0759"",""L"",1"
+"MASCATE,""yobep LS"",""0204"",""S"",1"
+"MASCATE,""yobep LS"",""0759"",""S"",1"
+"MELETI,""yobep LS"",""0620"",""M"",1"
+"MELETI,""yobep LS"",""0620"",""S"",1"
+"MERITARE,""yobep LS"",""0319"",""M"",1"
+"MERITARE,""yobep LS"",""0823"",""S"",1"
+"MERITARE,""yobep LS"",""0319"",""XL"",1"
+"MERITARE,""yobep LS"",""0823"",""XL"",1"
+"MORALITA,""yobep LS"",""2234"",""L"",1"
+"MORALITA,""yobep LS"",""2234"",""M"",1"
+"MORALITA,""yobep LS"",""2234"",""S"",1"
+"MOSSA G,""yobep LS"",""0202"",""L"",1"
+"MOSSA G,""yobep LS"",""0319"",""L"",1"
+"MOSSA G,""yobep LS"",""0970"",""L"",2"
+"MOSSA G,""yobep LS"",""0202"",""M"",1"
+"MOSSA G,""yobep LS"",""0319"",""M"",1"
+"MOSSA G,""yobep LS"",""0970"",""M"",1"
+"MOSSA G,""yobep LS"",""1117"",""M"",1"
+"MOSSA G,""yobep LS"",""0970"",""S"",1"
+"MOSSA G,""yobep LS"",""0319"",""XL"",1"
+"MOSSA G,""yobep LS"",""0846"",""XL"",1"
+"MOSSA G,""yobep LS"",""0970"",""XL"",2"
+"MURCIA,""yobep LS"",""0802"",""L"",1"
+"MURCIA,""yobep LS"",""0802"",""M"",1"
+"MURICE,""yobep LS"",""0101"",""L"",2"
+"MURICE,""yobep LS"",""0101"",""M"",2"
+"MURICE,""yobep LS"",""0101"",""S"",1"
+"MURICE,""yobep LS"",""0101"",""XL"",1"
+"ZAGRA,""yobep LS"",""3192"",""L"",1"
+"ZAGRA,""yobep LS"",""3192"",""M"",1"
+"ZAGRA,""yobep LS"",""3192"",""S"",1"
+"ZAMBRONE,""yobep LS"",""0470"",""L"",1"
+"ZAMBRONE,""yobep LS"",""0470"",""M"",1"
+"ZAMBRONE,""yobep LS"",""0470"",""XL"",1"
+"DANIELINA,""Cintura LS"",""0101"",""M"",2"
+"DANIELINA,""Cintura LS"",""0101"",""S"",5"
+"DANIELINA,""Cintura LS"",""0920"",""S"",1"
+"DANVILLE A,""Cintura LS"",""0101"",""U"",2"
+"DINDI B,""Cintura LS"",""2726"",""U"",1"
+"IAGO,""Borsa LS"",""0101"",""U"",1"
+"IAGO,""Borsa LS"",""2240"",""U"",1"
+"IALOFANE,""Borsa LS"",""0101"",""U"",2"
+"IGLESIAS B,""Borsa LS"",""0068"",""U"",1"
+"IGLESIAS B,""Borsa LS"",""0101"",""U"",1"
+"INTATTO,""Borsa LS"",""0101"",""U"",1"
+"INTATTO,""Borsa LS"",""0942"",""U"",1"
+"ISTORIE,""Borsa LS"",""0949"",""U"",1"
+"LANTERNE,""Toctobka LS"",""0921"",""L"",1"
+"LANTERNE,""Toctobka LS"",""0921"",""M"",1"
+"LANTERNE,""Toctobka LS"",""0921"",""S"",1"
+"LANTERNE,""Toctobka LS"",""0921"",""XL"",1"
+"SIGLE,""a LS"",""2731"",""L"",1"
+"SIGLE,""a LS"",""2731"",""M"",1"
+"SIGLE,""a LS"",""2731"",""S"",1"
+"LANIFICIO,""ytoka LS"",""0101"",""L"",1"
+"LANIFICIO,""ytoka LS"",""0101"",""S"",1"
+"LANIFICIO,""ytoka LS"",""0101"",""XL"",1"
+"MEDORO A,""epet LS"",""0101"",""U"",2"
+"MEDORO A,""epet LS"",""0202"",""U"",2"
+"MEDORO A,""epet LS"",""2246"",""U"",1"
+"MUNI A,""aka LS"",""0802"",""U"",1"
+"MUNI A,""aka LS"",""0970"",""U"",2"
+"MUNI A,""aka LS"",""2246"",""U"",1"
+"ROTTERDAM E,""Ke LS"",""0101"",""U"",2"
+"REMIGE,""Sciarpa LS"",""4648"",""U"",2"
+"RENATA,""actyk LS"",""0994"",""U"",2"
+"ROASCHIA,""Sciarpa LS"",""3359"",""U"",2"
+"ROBOAMO,""Sciarpa LS"",""3463"",""U"",1"
+"ROBOAMO,""Sciarpa LS"",""3465"",""U"",1"
+"FABULA,""Gonna LS"",""0101"",""L"",1"
+"FABULA,""Gonna LS"",""0101"",""M"",1"
+"FABULA,""Gonna LS"",""0101"",""S"",1"
+"FAGGI,""Gonna LS"",""3331"",""40"",1"
+"FAGGI,""Gonna LS"",""3331"",""42"",1"
+"FAGGI,""Gonna LS"",""3331"",""46"",1"
+"FANNY,""Gonna LS"",""3372"",""S"",1"
+"FATTURA B,""Gonna LS"",""0809"",""42"",1"
+"FATTURA B,""Gonna LS"",""0809"",""44"",1"
+"FAUSTIN,""Gonna LS"",""0101"",""42"",1"
+"FAUSTIN,""Gonna LS"",""0101"",""44"",1"
+"FAUSTIN,""Gonna LS"",""0101"",""46"",1"
+"FERRIERA,""Gonna LS"",""0813"",""S"",2"
+"FESTONE,""Gonna LS"",""0101"",""L"",1"
+"FESTONE,""Gonna LS"",""0733"",""L"",1"
+"FESTONE,""Gonna LS"",""0733"",""M"",1"
+"FESTONE,""Gonna LS"",""0101"",""S"",2"
+"FESTONE,""Gonna LS"",""0733"",""S"",1"
+"FLORINA,""Gonna LS"",""0101"",""44"",1"
+"FLORINA,""Gonna LS"",""0101"",""48"",1"
+"FONDAZIONE,""Gonna LS"",""0101"",""40"",1"
+"FONDAZIONE,""Gonna LS"",""0101"",""42"",1"
+"FONDAZIONE,""Gonna LS"",""0101"",""44"",1"
+"FONDAZIONE,""Gonna LS"",""0101"",""46"",1"
+"FRANCHEZZA,""Gonna LS"",""0863"",""42"",1"
+"FRANCHEZZA,""Gonna LS"",""0863"",""44"",1"
+"FRANCHEZZA,""Gonna LS"",""0863"",""46"",1"
+"FRANCOBOLLO,""Gonna LS"",""3372"",""M"",1"
+"FRAZIONE,""Gonna LS"",""3331"",""M"",1"
+"FRAZIONE,""Gonna LS"",""3331"",""S"",1"
+"MACADAMIA O,""Gonna LS"",""0101"",""42"",1"
+"MACADAMIA O,""Gonna LS"",""0101"",""48"",1"
+"MOROLO,""Gonna LS"",""0101"",""L"",1"
+"MOROLO,""Gonna LS"",""0759"",""L"",1"
+"MOROLO,""Gonna LS"",""0101"",""M"",1"
+"MOROLO,""Gonna LS"",""0759"",""M"",1"
+"MOROLO,""Gonna LS"",""0101"",""S"",2"
+"MOROLO,""Gonna LS"",""0759"",""S"",1"
+"MOROLO,""Gonna LS"",""0101"",""XL"",2"

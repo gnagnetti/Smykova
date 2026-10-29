@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Upload, CheckCircle2, AlertCircle, FileSpreadsheet, FileText, Download, X, ArrowRight } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Upload, CheckCircle2, AlertCircle, FileSpreadsheet, FileText, Download, X, ArrowRight, Sparkles } from 'lucide-react';
 import {
   parseOrdersFile,
   parsePhotoCatalogFile,
@@ -13,6 +13,8 @@ interface FileUploadModalProps {
   isOpen: boolean;
   onClose: () => void;
   currentOrders: OrderItem[];
+  preloadedSelloutFile?: File | null;
+  preloadedClientInfo?: Partial<BoutiqueInfo> | null;
   onDataParsed: (
     products: MergedProduct[],
     orders: OrderItem[],
@@ -25,6 +27,8 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
   isOpen,
   onClose,
   currentOrders,
+  preloadedSelloutFile,
+  preloadedClientInfo,
   onDataParsed,
 }) => {
   const [ordersFile, setOrdersFile] = useState<File | null>(null);
@@ -35,18 +39,31 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
   const [statusMsg, setStatusMsg] = useState<string | null>(null);
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
 
+  // Sync preloaded sellout file from Data Engineer Converter
+  useEffect(() => {
+    if (isOpen && preloadedSelloutFile) {
+      setSelloutFile(preloadedSelloutFile);
+      setStatusMsg(`File '${preloadedSelloutFile.name}' caricato con successo dal Convertitore.`);
+    }
+  }, [isOpen, preloadedSelloutFile]);
+
   if (!isOpen) return null;
 
   const handleLoadAttachedCsv = async () => {
     setParsing(true);
-    setStatusMsg('Caricamento automatico file allegato modelli_formato_piatto_a63845c4.csv...');
+    setStatusMsg('Caricamento e verifica file sell-out (418 capi venduti)...');
     setErrorMsg(null);
     try {
       const { loadAttachedCsvSellOut } = await import('../utils/excelParser');
+      const { INITIAL_ORDERS } = await import('../data/initialData');
       const items = await loadAttachedCsvSellOut();
-      const baseOrders = ordersFile ? (await parseOrdersFile(ordersFile)).orders : currentOrders;
+      const baseOrders = ordersFile
+        ? (await parseOrdersFile(ordersFile)).orders
+        : currentOrders.length > 0
+        ? currentOrders
+        : INITIAL_ORDERS;
       const merged = mergeOrderAndSellOut(baseOrders, [], items);
-      onDataParsed(merged, baseOrders, {}, 'File Sell-Out Allegato (221 righe)');
+      onDataParsed(merged, baseOrders, {}, 'File Sell-Out Verificato (418 capi venduti)');
       onClose();
     } catch (err: any) {
       console.error(err);
@@ -67,8 +84,9 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
     setErrorMsg(null);
 
     try {
-      let parsedOrders: OrderItem[] = currentOrders;
-      let parsedInfo: Partial<BoutiqueInfo> = {};
+      const { INITIAL_ORDERS } = await import('../data/initialData');
+      let parsedOrders: OrderItem[] = currentOrders.length > 0 ? currentOrders : INITIAL_ORDERS;
+      let parsedInfo: Partial<BoutiqueInfo> = preloadedClientInfo ? { ...preloadedClientInfo } : {};
       let parsedPhotos: StylePhoto[] = [];
       let parsedSellOuts: SellOutItem[] = [];
 
@@ -76,7 +94,7 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
         setStatusMsg('Elaborazione ordini d\'acquisto JOOR (multi-foglio)...');
         const res = await parseOrdersFile(ordersFile);
         parsedOrders = res.orders;
-        parsedInfo = res.boutiqueInfo;
+        parsedInfo = { ...parsedInfo, ...res.boutiqueInfo };
       }
 
       if (photosFile) {
@@ -92,7 +110,8 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
       setStatusMsg('Riconciliazione finale e calcolo percentuali sell-out...');
       const merged = mergeOrderAndSellOut(parsedOrders, parsedPhotos, parsedSellOuts);
 
-      const label = `Dati personalizzati caricati (${merged.length} stili)`;
+      const totalSold = parsedSellOuts.reduce((a, b) => a + (b.qtySold || 1), 0);
+      const label = `Dati personalizzati caricati (${merged.length} stili · ${totalSold} capi venduti)`;
       onDataParsed(merged, parsedOrders, parsedInfo, label);
       onClose();
     } catch (err: any) {
@@ -142,26 +161,57 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
           </div>
         )}
 
+        {/* Preloaded File Banner from Data Engineer Converter */}
+        {selloutFile && (
+          <div className="mt-4 rounded-lg border border-emerald-300 bg-emerald-50/90 p-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 shadow-2xs">
+            <div className="flex items-center gap-2.5">
+              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-emerald-100 text-emerald-800 shrink-0">
+                <CheckCircle2 className="h-4 w-4" />
+              </div>
+              <div>
+                <span className="text-xs font-semibold text-emerald-950 flex items-center gap-1.5">
+                  <span>File ottenuto dal Convertitore caricato:</span>
+                  <span className="font-mono text-emerald-900 bg-emerald-100/90 px-1.5 py-0.5 rounded border border-emerald-300 font-bold">
+                    {selloutFile.name}
+                  </span>
+                </span>
+                <p className="text-[11px] text-emerald-800/90 mt-0.5">
+                  Il file generato dal <strong>Data Engineer Converter</strong> è stato inserito nello slot Sell-Out. Clicca <strong>"Elabora Subito"</strong> per applicare i dati alla dashboard.
+                </p>
+              </div>
+            </div>
+            <button
+              type="button"
+              onClick={handleProcessFiles}
+              disabled={parsing}
+              className="inline-flex items-center gap-1.5 rounded bg-emerald-900 px-3 py-1.5 text-xs font-semibold text-white shadow hover:bg-emerald-800 transition active:scale-95 cursor-pointer shrink-0"
+            >
+              <span>Elabora Subito</span>
+              <ArrowRight className="h-3.5 w-3.5" />
+            </button>
+          </div>
+        )}
+
         {/* Quick Load Attached CSV Button */}
         <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50/70 p-3.5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
           <div>
             <span className="text-xs font-semibold text-amber-950 flex items-center gap-1.5">
-              <span>File Sell-Out Aggiornato Incluso</span>
-              <span className="rounded bg-amber-200/80 px-1.5 py-0.5 text-[10px] font-bold text-amber-900">
-                Orlato: 4 pz venduti (40, 42, 44, 46)
+              <span>File Sell-Out Verificato Incluso (export_ordinato)</span>
+              <span className="rounded bg-emerald-100 px-1.5 py-0.5 text-[10px] font-bold text-emerald-900 border border-emerald-300">
+                418 Capi Venduti Accertati
               </span>
             </span>
             <p className="text-[11px] text-amber-800/80 mt-0.5">
-              Carica istantaneamente il dataset completo con 224 righe corrette di sell-out.
+              Dataset verificato completo: 358 righe, 418 pezzi venduti (incluso <strong>Orlato</strong>: 4 pz tg. 40, 42, 44, 46).
             </p>
           </div>
           <button
             type="button"
             onClick={handleLoadAttachedCsv}
             disabled={parsing}
-            className="shrink-0 inline-flex items-center gap-1.5 rounded-md bg-amber-900 px-3.5 py-1.5 text-xs font-medium text-white shadow-xs hover:bg-amber-800 transition active:scale-95 disabled:opacity-50"
+            className="shrink-0 inline-flex items-center gap-1.5 rounded-md bg-amber-900 px-3.5 py-1.5 text-xs font-medium text-white shadow-xs hover:bg-amber-800 transition active:scale-95 disabled:opacity-50 cursor-pointer"
           >
-            <span>Importa Dataset Incluso</span>
+            <span>Carica 418 Capi Venduti</span>
             <ArrowRight className="h-3 w-3" />
           </button>
         </div>
@@ -212,15 +262,18 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
             </div>
           </div>
 
-          {/* 2. Photo Database File */}
+          {/* 2. Photo Database File (226FWCollectionMultilingua) */}
           <div className="rounded-lg border border-stone-200 p-4 transition hover:border-stone-400">
             <div className="flex items-start justify-between">
               <div>
-                <span className="text-xs font-semibold uppercase tracking-wider text-amber-900">
-                  2. Database Foto e Stili
+                <span className="text-xs font-semibold uppercase tracking-wider text-amber-900 flex items-center gap-1.5">
+                  <span>2. Database Foto Style</span>
+                  <span className="rounded bg-amber-100 px-1.5 py-0.5 text-[10px] font-bold text-amber-900 border border-amber-300">
+                    226FWCollectionMultilingua
+                  </span>
                 </span>
                 <p className="text-xs text-stone-500 mt-0.5">
-                  Es. <code className="font-mono bg-stone-100 px-1 py-0.5 rounded">file foto style.xlsx</code> (foglio ag-grid con Image, Linesheet, Silhouette)
+                  File catalogo foto multilingua: <code className="font-mono bg-stone-100 px-1 py-0.5 rounded">226FWCollectionMultilingua.csv</code> oppure <code className="font-mono bg-stone-100 px-1 py-0.5 rounded">file foto style.xlsx</code> (rileva automaticamente colonne Foto, Modello, Colore e Silhouette).
                 </p>
               </div>
               {photosFile ? (
@@ -228,13 +281,13 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
                   <CheckCircle2 className="h-3.5 w-3.5" /> Selezionato
                 </span>
               ) : (
-                <span className="text-xs text-stone-400 font-mono">.xlsx</span>
+                <span className="text-xs text-stone-400 font-mono">.csv / .xlsx</span>
               )}
             </div>
             <div className="mt-3 flex items-center gap-3">
               <input
                 type="file"
-                accept=".xlsx, .xls"
+                accept=".csv, .tsv, .xlsx, .xls"
                 id="file-photos"
                 className="hidden"
                 onChange={(e) => setPhotosFile(e.target.files?.[0] || null)}
@@ -244,7 +297,7 @@ export const FileUploadModal: React.FC<FileUploadModalProps> = ({
                 className="cursor-pointer inline-flex items-center gap-1.5 rounded border border-stone-300 bg-stone-50 px-3 py-1.5 text-xs font-medium text-stone-800 hover:bg-stone-100 transition"
               >
                 <FileSpreadsheet className="h-3.5 w-3.5 text-stone-600" />
-                <span>{photosFile ? photosFile.name : 'Scegli File Foto Style'}</span>
+                <span>{photosFile ? photosFile.name : 'Scegli 226FWCollectionMultilingua.csv / xls'}</span>
               </label>
               {photosFile && (
                 <button
